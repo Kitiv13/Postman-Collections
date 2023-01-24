@@ -1,0 +1,1634 @@
+{
+	"info": {
+		"_postman_id": "82399f34-bf58-4154-bf4d-40949eb7ea7f",
+		"name": "Users — на чем потестить SOAP и REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24513995"
+	},
+	"item": [
+		{
+			"name": "doRegister",
+			"item": [
+				{
+					"name": "Smoke Через Json",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"toshka@mail.ru\",\r\n    \"name\": \"Антошка\",\r\n    \"password\": \"123789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Smoke Через Json",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"toshka@mail.ru\",\r\n    \"name\": \"Антошка\",\r\n    \"password\": \"123789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:38:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Антошка\",\n    \"avatar\": \"http://users.bugred.ru//tmp/default_avatar.jpg\",\n    \"password\": \"984a8d837c5b2108673cf1d734a150fc43a98d1a02cf41ccbba07415f3780cc9c0252f7535e4e368928b2664ebaeb14dd19de26a674ebd23a5707bdc80341734\",\n    \"birthday\": 0,\n    \"email\": \"toshka@mail.ru\",\n    \"gender\": \"\",\n    \"date_start\": 0,\n    \"hobby\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Smoke Через Params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister?email=annushka@mail.ru&name=Anushka&password=12345",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "annushka@mail.ru"
+								},
+								{
+									"key": "name",
+									"value": "Anushka"
+								},
+								{
+									"key": "password",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Невалидный email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"@mail.ru\",\r\n    \"name\": \"Антошка\",\r\n    \"password\": \"123789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Невалидный email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"@mail.ru\",\r\n    \"name\": \"Антошка\",\r\n    \"password\": \"123789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:39:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"error\",\n    \"message\": \" Некоректный  email @mail.ru\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Замена порядка параметров",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister?email=demo3@mail.r&password=123456&name=annaaa",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "demo3@mail.r"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "name",
+									"value": "annaaa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Закомментированный параметр Json",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"demo3@mail.ru\",\r\n    */\"name\": \"annaaa\",\r\n    \"password\": \"123789\"/*\r\n}"
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Закомментированный параметр Json",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"demo3@mail.ru\",\r\n    */\"name\": \"annaaa\",\r\n    \"password\": \"123789\"/*\r\n}"
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:39:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"error\",\n    \"message\": \"Параметр email является обязательным!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Продублировать параметры в  json",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"demo4@mail.ru\",\r\n    \"name\": \"Annaaaa\",\r\n    \"password\": \"123789\",\r\n    \"name\": \"Annaaa\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"demo4@mail.ru\",\r\n    \"name\": \"Annaaaa\",\r\n    \"password\": \"123789\",\r\n    \"name\": \"Annaaa\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:42:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Annaaa\",\n    \"avatar\": \"http://users.bugred.ru//tmp/default_avatar.jpg\",\n    \"password\": \"984a8d837c5b2108673cf1d734a150fc43a98d1a02cf41ccbba07415f3780cc9c0252f7535e4e368928b2664ebaeb14dd19de26a674ebd23a5707bdc80341734\",\n    \"birthday\": 0,\n    \"email\": \"demo4@mail.ru\",\n    \"gender\": \"\",\n    \"date_start\": 0,\n    \"hobby\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Продублировать параметр params",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister?email=demo6@mail.ru&name=Anna2&password=12345&name=Anna4",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "demo6@mail.ru"
+								},
+								{
+									"key": "name",
+									"value": "Anna2"
+								},
+								{
+									"key": "password",
+									"value": "12345"
+								},
+								{
+									"key": "name",
+									"value": "Anna4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Продублировать параметр params",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister?email=demo5@mail.ru&name=Anna1&password=12345&name=Anna1",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "demo5@mail.ru"
+										},
+										{
+											"key": "name",
+											"value": "Anna1"
+										},
+										{
+											"key": "password",
+											"value": "12345"
+										},
+										{
+											"key": "name",
+											"value": "Anna1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:44:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Anna1\",\n    \"avatar\": \"http://users.bugred.ru//tmp/default_avatar.jpg\",\n    \"password\": \"3627909a29c31381a071ec27f7c9ca97726182aed29a7ddd2e54353322cfb30abb9e3a6df2ac2c20fe23436311d678564d0c8d305930575f60e2d3d048184d79\",\n    \"birthday\": 0,\n    \"email\": \"demo5@mail.ru\",\n    \"gender\": \"\",\n    \"date_start\": 0,\n    \"hobby\": \"\"\n}"
+						},
+						{
+							"name": "Продублировать параметр params",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister?email=demo6@mail.ru&name=Anna2&password=12345&name=Anna4",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "demo6@mail.ru"
+										},
+										{
+											"key": "name",
+											"value": "Anna2"
+										},
+										{
+											"key": "password",
+											"value": "12345"
+										},
+										{
+											"key": "name",
+											"value": "Anna4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:46:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Anna4\",\n    \"avatar\": \"http://users.bugred.ru//tmp/default_avatar.jpg\",\n    \"password\": \"3627909a29c31381a071ec27f7c9ca97726182aed29a7ddd2e54353322cfb30abb9e3a6df2ac2c20fe23436311d678564d0c8d305930575f60e2d3d048184d79\",\n    \"birthday\": 0,\n    \"email\": \"demo6@mail.ru\",\n    \"gender\": \"\",\n    \"date_start\": 0,\n    \"hobby\": \"\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Некорректный синтаксис json",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    email: demo5@mail.ru\",\r\n    \"name\": \"anna5\",\r\n    \"password\": \"123789\"\r\n}"
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/doregister",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"doregister"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Некорректный синтаксис json",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    email: demo5@mail.ru\",\r\n    \"name\": \"anna5\",\r\n    \"password\": \"123789\"\r\n}"
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/doregister",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"doregister"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:52:19 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"error\",\n    \"message\": \"Параметр email является обязательным!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "CreateCompany",
+			"item": [
+				{
+					"name": "Не существующий автор email owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company_name\": \"M $ M\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"demo1@gmail.com\", \"demo2@list.ru\"],\r\n  \"email_owner\": \"demo3@mail.ru\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createcompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Не существующие сотрудники company users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company_name\": \"M $ M\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"demo1@gmail.com\", \"demo2@list.ru\"],\r\n  \"email_owner\": \"demo5@mail.ru\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createcompany"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Не существующие сотрудники company users",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_name\": \"M $ M\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"demo1@gmail.com\", \"demo2@list.ru\"],\r\n  \"email_owner\": \"demo5@mail.ru\"\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createcompany"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 10:57:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"error\",\n    \"message\": \" company_users  не указаны сотрудники\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Smoke. Все email зарегистрированы",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"company_name\": \"M $ M\",\r\n  \"company_type\": \"ООО\",\r\n  \"company_users\": [\"demo4@mail.ru\", \"toshka@mail.ru\"],\r\n  \"email_owner\": \"demo5@mail.ru\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createcompany"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreateUser",
+			"item": [
+				{
+					"name": "Не существующая компания",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"demo6@mail.com\",\r\n  \"name\": \"anna6\",\r\n  \"tasks\": [12],\r\n  \"companies\": [36,37],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createuser",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createuser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Не существующая компания",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"demo6@mail.com\",\r\n  \"name\": \"anna6\",\r\n  \"tasks\": [12],\r\n  \"companies\": [36,37],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 11:16:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"error\",\n    \"message\": \"компании не найдены\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Smoke",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"demo7@mail.com\",\r\n  \"name\": \"anna7\",\r\n  \"tasks\": [12],\r\n  \"companies\": [27],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/createuser",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"createuser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"demo7@mail.com\",\r\n  \"name\": \"anna7\",\r\n  \"tasks\": [12],\r\n  \"companies\": [27],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/createuser",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"createuser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Dec 2022 11:16:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"demo7@mail.com\",\n    \"name\": \"anna7\",\n    \"name1\": \"Тестовый, ясен пень\",\n    \"hobby\": \"Стрельба из лука, Настолки\",\n    \"surname1\": \"Иванов\",\n    \"fathername1\": \"Петров\",\n    \"cat\": \"Маруся\",\n    \"dog\": \"Ушастый\",\n    \"parrot\": \"Васька\",\n    \"cavy\": \"Кто ты?\",\n    \"hamster\": \"Хомяк\",\n    \"squirrel\": \"Белая горячка к нам пришла\",\n    \"phone\": \"333 33 33\",\n    \"adres\": \"адрес 1\",\n    \"gender\": \"m\",\n    \"date_start\": {\n        \"sec\": 973890000,\n        \"usec\": 0\n    },\n    \"date_updated\": {\n        \"sec\": 1672139802,\n        \"usec\": 909000\n    },\n    \"birthday\": {\n        \"sec\": -2208997817,\n        \"usec\": 0\n    },\n    \"role\": [\n        \"user\"\n    ],\n    \"date_register\": {\n        \"sec\": 1672139802,\n        \"usec\": 909000\n    },\n    \"date\": \"2022-12-27\",\n    \"by_user\": \"manager@mail.ru\",\n    \"companies\": [\n        {\n            \"name\": \"M $ M\",\n            \"id\": 27\n        }\n    ],\n    \"tasks\": [\n        {\n            \"name\": \"Веснушки\",\n            \"id\": 12\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AddAvatar",
+			"item": [
+				{
+					"name": "Размер файла 151 kb jpg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/151.jpg"
+								},
+								{
+									"key": "email",
+									"value": "annushka@mail.ru",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"addavatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Размер файла 150 kb jpg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "annushka@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/150.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"addavatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Размер файла 149 kb jpg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "annushka@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/149.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"addavatar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Размер файла 149 kb jpg",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "annushka@mail.ru",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/C:/Users/user/Downloads/149.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"addavatar"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Dec 2022 06:00:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"maximum file size 150kb\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Smoke",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "annushka@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/02C2799D-935E-4E79-96EE-5C5A1FEDB0A2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/addavatar",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"addavatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeleteAvatar",
+			"item": [
+				{
+					"name": "Smoke",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/deleteavatar/?email=annushka@mail.ru",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"deleteavatar",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "annushka@mail.ru"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MagicSearch",
+			"item": [
+				{
+					"name": "Smoke Поиск по компании",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "query",
+									"value": "Ромашка",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/magicsearch",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"magicsearch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Smoke",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "query",
+									"value": "M $ M",
+									"type": "text"
+								},
+								{
+									"key": "partyType",
+									"value": "USER",
+									"type": "text"
+								},
+								{
+									"key": "fullSimilarity",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "taskStatus",
+									"value": "ALL",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://users.bugred.ru/tasks/rest/magicsearch",
+							"protocol": "http",
+							"host": [
+								"users",
+								"bugred",
+								"ru"
+							],
+							"path": [
+								"tasks",
+								"rest",
+								"magicsearch"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Smoke",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "query",
+											"value": "M $ M",
+											"type": "text"
+										},
+										{
+											"key": "partyType",
+											"value": "USER",
+											"type": "text"
+										},
+										{
+											"key": "fullSimilarity",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "taskStatus",
+											"value": "ALL",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://users.bugred.ru/tasks/rest/magicsearch",
+									"protocol": "http",
+									"host": [
+										"users",
+										"bugred",
+										"ru"
+									],
+									"path": [
+										"tasks",
+										"rest",
+										"magicsearch"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 232,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.10.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Dec 2022 06:34:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/5.6.14"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"foundCount\": 190,\n    \"results\": [\n        {\n            \"name\": \"Zhuk+27\",\n            \"date\": \"2022-12-28\",\n            \"email\": \"zhuk+37@mail.ru\",\n            \"by_user\": \"manager@mail.ru\",\n            \"tasks\": [\n                {\n                    \"status\": \"ACTUAL\",\n                    \"name\": \"Задача Zhuk\",\n                    \"id_task\": 75\n                }\n            ],\n            \"why_block\": [],\n            \"type\": \"user\"\n        },\n        {\n            \"name\": \"Zhuk+704\",\n            \"date\": \"2022-12-28\",\n            \"email\": \"zhuk+837@mail.ru\",\n            \"by_user\": \"manager@mail.ru\",\n            \"tasks\": [\n                {\n                    \"status\": \"ACTUAL\",\n                    \"name\": \"Задача Zhuk\",\n                    \"id_task\": 65\n                }\n            ],\n            \"why_block\": [],\n            \"type\": \"user\"\n        },\n        {\n            \"name\": \"Zhuk+114\",\n            \"date\": \"2022-12-28\",\n            \"email\": \"zhuk+399@mail.ru\",\n            \"by_user\": \"manager@mail.ru\",\n            \"tasks\": [\n                {\n                    \"status\": \"ACTUAL\",\n                    \"name\": \"Задача Zhuk\",\n                    \"id_task\": 58\n                }\n            ],\n            \"why_block\": [],\n            \"type\": \"user\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
